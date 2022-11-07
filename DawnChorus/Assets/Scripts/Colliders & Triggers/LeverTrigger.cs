@@ -9,6 +9,7 @@ public class LeverTrigger : MonoBehaviour
 {
 
     public GameObject movingObject;
+    public GameObject moveLocation;
     private bool triggerActivated = false;
 
     public float speed = 3;
@@ -21,7 +22,7 @@ public class LeverTrigger : MonoBehaviour
 
         if (!triggerActivated)
         {
-            if (other.tag == "Lever")
+            if (other.tag == "Triggerable")
             {
                 Debug.Log("Loihefiohersiotghoresder");
                 triggerActivated = true;
@@ -34,7 +35,7 @@ public class LeverTrigger : MonoBehaviour
     {
         if (triggerActivated)
         {
-            movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, target, ref currentVelocity, smoothTime);
+            movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, moveLocation.transform.position, ref currentVelocity, smoothTime);
         }
         
     }
