@@ -7,6 +7,7 @@ public class QuestItemPickedUp : MonoBehaviour
 
     public GameManager gameManager = new GameManager();
 
+
     public bool itemInteracted = false;
     private bool interactionCheck = true;
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //using UnityEngine.Rendering.PostProcessing;
@@ -9,28 +10,25 @@ public class GameManager : MonoBehaviour
     //public PostProcessProfile doubleP;
     [HideInInspector]
     public int questItemsInteracted = 0;
+    [HideInInspector]
     public bool allItemsInteracted = false;
+
+    public GameObject leverTrigger;
     //public bool itemInteracted = false;
 
     private void Start()
     {
-        //doubleP.GetSetting<Vignette>().intensity.value = 0;
+        //leverTrigger.GetComponent<LeverTrigger>().enabled = false;
     }
 
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Foe").Length <= 0)
+        if (questItemsInteracted == 3)
         {
-            Cursor.lockState = CursorLockMode.None;
-
-            SceneManager.LoadScene("GoodEnd");
+            allItemsInteracted = true;
+            //leverTrigger.GetComponent<LeverTrigger>().enabled = true;
         }
-        else if (GameObject.FindGameObjectsWithTag("Friend").Length <= 0)
-        {
-            Cursor.lockState = CursorLockMode.None;
-
-            SceneManager.LoadScene("BadEnd");
-        }
+        
     }
 
 }

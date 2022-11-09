@@ -9,12 +9,15 @@ public class LeverTrigger : MonoBehaviour
 {
 
     public GameObject movingObject;
+    public GameObject initLocation;
     public GameObject moveLocation;
+    
     private bool triggerActivated = false;
 
     public float speed = 3;
     public float smoothTime = 0.5f;
     public Vector3 target = new Vector3(-4, 0, 10);
+    //public Vector3 initTarget;
     Vector3 currentVelocity;
 
     private void OnTriggerEnter(Collider other)
@@ -24,11 +27,16 @@ public class LeverTrigger : MonoBehaviour
         {
             if (other.tag == "Triggerable")
             {
-                Debug.Log("Loihefiohersiotghoresder");
+                Debug.Log("Lever Activated");
                 triggerActivated = true;
             }
         }
         
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        triggerActivated = false;
     }
 
     public void Update()
@@ -36,6 +44,10 @@ public class LeverTrigger : MonoBehaviour
         if (triggerActivated)
         {
             movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, moveLocation.transform.position, ref currentVelocity, smoothTime);
+        }
+        else if (!triggerActivated)
+        {
+            movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, initLocation.transform.position, ref currentVelocity, smoothTime);
         }
         
     }
