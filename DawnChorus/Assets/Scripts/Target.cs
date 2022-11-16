@@ -25,8 +25,6 @@ public class Target : MonoBehaviour
             Debug.Log("You killed a child");
             //vignette.intensity.value = 0.5f;
             
-
-            
         }
         else if (gameObject.tag == "Foe")
         {
