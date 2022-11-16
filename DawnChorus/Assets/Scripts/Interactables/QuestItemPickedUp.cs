@@ -5,10 +5,11 @@ using UnityEngine;
 public class QuestItemPickedUp : MonoBehaviour
 {
 
-    public GameManager gameManager = new GameManager();
+    public GameManager gameManager;
 
-
+    [HideInInspector]
     public bool itemInteracted = false;
+    [HideInInspector]
     private bool interactionCheck = true;
 
 

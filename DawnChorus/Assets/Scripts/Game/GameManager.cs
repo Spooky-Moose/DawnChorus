@@ -18,15 +18,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //leverTrigger.GetComponent<LeverTrigger>().enabled = false;
+        leverTrigger.GetComponent<LeverTrigger>().enabled = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (questItemsInteracted == 3)
         {
             allItemsInteracted = true;
-            //leverTrigger.GetComponent<LeverTrigger>().enabled = true;
+            leverTrigger.GetComponent<LeverTrigger>().enabled = true;
         }
         
     }
