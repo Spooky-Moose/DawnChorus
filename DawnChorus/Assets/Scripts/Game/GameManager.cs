@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         leverTrigger.GetComponent<LeverTrigger>().enabled = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (questItemsInteracted == 3)
         {

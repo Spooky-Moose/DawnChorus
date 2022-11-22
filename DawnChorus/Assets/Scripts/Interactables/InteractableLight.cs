@@ -5,15 +5,19 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class InteractableLight : MonoBehaviour
 {
+    //public GameObject lightSource;
 
     public void PickedUp()
     {
-        GetComponent<Light>().intensity = 0;
+        //lightSource.GetComponent<Light>().intensity = 0;
+        GetComponentInChildren<Light>().intensity = 0;
+
     }
 
     public void Dropped()
     {
-        GetComponent<Light>().intensity = 3;
+        //lightSource.GetComponent<Light>().intensity = 3;
+        GetComponentInChildren<Light>().intensity = 3;
     }
 
 }
