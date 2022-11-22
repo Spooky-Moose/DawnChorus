@@ -5,18 +5,33 @@ using UnityEngine;
 public class QuestItemPickedUp : MonoBehaviour
 {
 
-    public GameObject gameManager;
+    public GameManager gameManager;
 
     [HideInInspector]
     public bool itemInteracted = false;
     [HideInInspector]
-    //private bool interactionCheck = true;
+    public int itemCount;
 
+    public void Start()
+    {
+        Debug.Log(gameManager);
+        Debug.Log(gameManager.questItemsInteracted);
+        itemCount = 0;
+    }
+
+    public void Update()
+    {
+        //itemCount = gameManager.questItemsInteracted;
+        gameManager.questItemsInteracted = itemCount;
+    }
 
     public void PickedUp()
     {
         Debug.Log("Interaction Check");
-        gameManager.GetComponent<GameManager>().questItemsInteracted++;
+        
+        itemCount++;
+        Debug.Log(itemCount);
+        //gameManager.incrementQuestItem();
         //itemInteracted = true;
         //interactionChecker();   
     }
@@ -26,7 +41,7 @@ public class QuestItemPickedUp : MonoBehaviour
         //interactionCheck = false;
         if (itemInteracted)
         {
-            gameManager.GetComponent<GameManager>().questItemsInteracted++;
+            gameManager.questItemsInteracted++;
             Debug.Log("item incremented");
         }
         

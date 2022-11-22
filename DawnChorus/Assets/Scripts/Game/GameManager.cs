@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         leverTrigger.GetComponent<LeverTrigger>().enabled = false;
+        //questItemsInteracted = 0;
     }
 
     void Update()
@@ -29,6 +30,11 @@ public class GameManager : MonoBehaviour
             leverTrigger.GetComponent<LeverTrigger>().enabled = true;
         }
         
+    }
+
+    public void incrementQuestItem()
+    {
+        questItemsInteracted++;
     }
 
 }
