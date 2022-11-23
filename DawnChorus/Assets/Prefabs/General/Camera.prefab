@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 5212102228616330019}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: ProgressionItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,8 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8175c1bb78c2f3340a8fa78189b695a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  itemInteracted: 1
+  pickedUp: 1
 --- !u!114 &3649743680109045572
 MonoBehaviour:
   m_ObjectHideFlags: 0

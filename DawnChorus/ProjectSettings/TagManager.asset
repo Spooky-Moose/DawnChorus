@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Triggerable
+  - ProgressionItem
+  - Progression Item
   layers:
   - Default
   - TransparentFX
