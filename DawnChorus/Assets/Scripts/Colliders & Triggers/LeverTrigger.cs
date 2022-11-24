@@ -12,7 +12,8 @@ public class LeverTrigger : MonoBehaviour
     public GameObject initLocation;
     public GameObject moveLocation;
     
-    private bool triggerActivated = false;
+    public bool triggerActivated = false;
+    
 
     public float speed = 3;
     public float smoothTime = 0.5f;
@@ -28,9 +29,11 @@ public class LeverTrigger : MonoBehaviour
             if (other.tag == "Triggerable")
             {
                 Debug.Log("Lever Activated");
+                movingObject.GetComponent<AudioSource>().Play();
                 triggerActivated = true;
             }
         }
+        
         
     }
 

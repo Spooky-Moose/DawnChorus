@@ -24,7 +24,7 @@ public class GameScript : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("ProgressionItem").Length <= 3)
+        if (GameObject.FindGameObjectsWithTag("ProgressionItem").Length == 3)
         {
             allItemsInteracted = true;
             leverTrigger.GetComponent<LeverTrigger>().enabled = true;
