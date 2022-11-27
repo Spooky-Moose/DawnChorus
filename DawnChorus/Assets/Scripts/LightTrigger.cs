@@ -25,17 +25,25 @@ public class LightTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        leverLight.GetComponent<Light>().color = Color.green;
-        lightsActivated = true;
-        PlayAnims();
-        
+        if (other.tag == "Triggerable")
+        {
+            leverLight.GetComponent<Light>().color = Color.green;
+            lightsActivated = true;
+            PlayAnims();
+        }
+          
     }
 
     private void OnTriggerExit(Collider other)
     {
-        leverLight.GetComponent<Light>().color = initColor;
-        lightsActivated = false;
-        PlayAnims();
+        if (other.tag == "Triggerable")
+        {
+            leverLight.GetComponent<Light>().color = initColor;
+            lightsActivated = false;
+            PlayAnims();
+        }
+
+        
     }
 
     private void PlayAnims()
