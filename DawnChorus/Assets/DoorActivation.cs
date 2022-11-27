@@ -12,14 +12,30 @@ public class DoorActivation : MonoBehaviour
     public float smoothTime = 0.5f;
     Vector3 currentVelocity;
 
+    private bool doorOpen = false;
+
 
     public void SocketEntered()
     {
-        door.transform.position = Vector3.SmoothDamp(initDoorDestination.transform.position, finalDoorDestination.transform.position, ref currentVelocity, smoothTime);
+        doorOpen = false;
+        //door.transform.position = Vector3.SmoothDamp(initDoorDestination.transform.position, finalDoorDestination.transform.position, ref currentVelocity, smoothTime);
     }
 
     public void SocketExit()
     {
-        door.transform.position = Vector3.SmoothDamp(finalDoorDestination.transform.position, initDoorDestination.transform.position, ref currentVelocity, smoothTime);
+        doorOpen = true;
+        //door.transform.position = Vector3.SmoothDamp(finalDoorDestination.transform.position, initDoorDestination.transform.position, ref currentVelocity, smoothTime);
+    }
+
+    public void Update()
+    {
+        if (doorOpen)
+        {
+            door.transform.position = Vector3.SmoothDamp(door.transform.position, finalDoorDestination.transform.position, ref currentVelocity, smoothTime);
+        }
+        else if (!doorOpen)
+        {
+            door.transform.position = Vector3.SmoothDamp(door.transform.position, initDoorDestination.transform.position, ref currentVelocity, smoothTime);
+        }
     }
 }
