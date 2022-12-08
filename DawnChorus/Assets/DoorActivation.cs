@@ -18,12 +18,14 @@ public class DoorActivation : MonoBehaviour
     public void SocketEntered()
     {
         doorOpen = false;
+        door.GetComponent<AudioSource>().Play();
         //door.transform.position = Vector3.SmoothDamp(initDoorDestination.transform.position, finalDoorDestination.transform.position, ref currentVelocity, smoothTime);
     }
 
     public void SocketExit()
     {
         doorOpen = true;
+        door.GetComponent<AudioSource>().Play();
         //door.transform.position = Vector3.SmoothDamp(finalDoorDestination.transform.position, initDoorDestination.transform.position, ref currentVelocity, smoothTime);
     }
 

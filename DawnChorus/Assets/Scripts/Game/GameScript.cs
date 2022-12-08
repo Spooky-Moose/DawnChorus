@@ -14,11 +14,12 @@ public class GameScript : MonoBehaviour
     public bool allItemsInteracted = false;
 
     public GameObject leverTrigger;
+    //public GameObject leverAudio;
     //public bool itemInteracted = false;
 
     private void Start()
     {
-        leverTrigger.GetComponent<LeverTrigger>().enabled = false;
+        //leverTrigger.GetComponent<LeverTrigger>().enabled = false;
         //questItemsInteracted = 0;
     }
 
@@ -28,9 +29,11 @@ public class GameScript : MonoBehaviour
         {
             allItemsInteracted = true;
             leverTrigger.GetComponent<LeverTrigger>().enabled = true;
+            //leverAudio.GetComponent<AudioSource>().Play();
         }
 
     }
+
 
     public void incrementQuestItem()
     {

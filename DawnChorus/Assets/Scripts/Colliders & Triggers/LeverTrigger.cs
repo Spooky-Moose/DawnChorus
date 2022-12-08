@@ -11,6 +11,8 @@ public class LeverTrigger : MonoBehaviour
     public GameObject movingObject;
     public GameObject initLocation;
     public GameObject moveLocation;
+
+    public GameObject leverAudio;
     
     public bool triggerActivated = false;
     
@@ -20,6 +22,16 @@ public class LeverTrigger : MonoBehaviour
     public Vector3 target = new Vector3(-4, 0, 10);
     //public Vector3 initTarget;
     Vector3 currentVelocity;
+
+
+    private void Awake()
+    {
+        gameObject.GetComponent<LeverTrigger>().enabled = false;
+    }
+    private void Start()
+    {
+        leverAudio.GetComponent<AudioSource>().Play();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

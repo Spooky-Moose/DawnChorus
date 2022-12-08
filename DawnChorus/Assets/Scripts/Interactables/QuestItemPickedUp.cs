@@ -6,27 +6,31 @@ using UnityEngine;
 public class QuestItemPickedUp : MonoBehaviour
 {
     public bool pickedUp = false;
+    private string tagName = "ProgressionItem";
 
 
     public void Start()
     {
+        pickedUp = false;
         Debug.Log(this.gameObject.tag);
     }
 
     public void PickedUp()
     {        
         pickedUp = true;
-        
+        gameObject.layer = 0;
+        gameObject.tag = tagName;
 
-        Debug.Log(pickedUp);
-        Debug.Log(this.gameObject.tag);
+        //Debug.Log(pickedUp);
+        //Debug.Log(this.gameObject.tag);
     }
 
-    public void tagChange()
+
+    public void Update()
     {
         if (pickedUp)
         {
-            this.gameObject.tag = "ProgressionItem";
+            gameObject.tag = tagName;
         }
     }
 
