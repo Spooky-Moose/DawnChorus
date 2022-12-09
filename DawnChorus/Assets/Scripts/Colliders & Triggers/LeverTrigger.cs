@@ -27,6 +27,7 @@ public class LeverTrigger : MonoBehaviour
     private void Awake()
     {
         gameObject.GetComponent<LeverTrigger>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
     private void Start()
     {

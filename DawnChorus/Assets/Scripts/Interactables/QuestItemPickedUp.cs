@@ -12,13 +12,13 @@ public class QuestItemPickedUp : MonoBehaviour
     public void Start()
     {
         pickedUp = false;
-        Debug.Log(this.gameObject.tag);
+       // Debug.Log(this.gameObject.tag);
     }
 
     public void PickedUp()
     {        
         pickedUp = true;
-        gameObject.layer = 0;
+        //gameObject.layer = 0;
         gameObject.tag = tagName;
 
         //Debug.Log(pickedUp);

@@ -4359,6 +4359,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkieTalkie
       objectReference: {fileID: 0}
+    - target: {fileID: 8196986858057123931, guid: 58a3dd1981cc8b347a1903ff8a037fd8, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196986858057123931, guid: 58a3dd1981cc8b347a1903ff8a037fd8, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a3dd1981cc8b347a1903ff8a037fd8, type: 3}
 --- !u!4 &770409068 stripped
@@ -7090,7 +7098,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-552308
+  m_Name: pb_Mesh-11074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

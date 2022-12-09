@@ -29,6 +29,7 @@ public class GameScript : MonoBehaviour
         {
             allItemsInteracted = true;
             leverTrigger.GetComponent<LeverTrigger>().enabled = true;
+            leverTrigger.GetComponent<BoxCollider>().enabled = true;
             //leverAudio.GetComponent<AudioSource>().Play();
         }
 
