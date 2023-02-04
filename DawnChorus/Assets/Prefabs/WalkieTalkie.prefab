@@ -12744,6 +12744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickedUp: 1
+  billboard: {fileID: 0}
 --- !u!114 &5935182601218319812
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class QuestItemPickedUp : MonoBehaviour
     public bool pickedUp = false;
     private string tagName = "ProgressionItem";
 
+    public GameObject billboard;
+
 
     public void Start()
     {
@@ -20,6 +22,8 @@ public class QuestItemPickedUp : MonoBehaviour
         pickedUp = true;
         //gameObject.layer = 0;
         gameObject.tag = tagName;
+
+        Destroy(billboard);
 
         //Debug.Log(pickedUp);
         //Debug.Log(this.gameObject.tag);
