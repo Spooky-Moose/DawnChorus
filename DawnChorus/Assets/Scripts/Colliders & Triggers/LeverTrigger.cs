@@ -61,10 +61,10 @@ public class LeverTrigger : MonoBehaviour
         {
             movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, moveLocation.transform.position, ref currentVelocity, smoothTime);
         }
-        else if (!triggerActivated)
+        /*else if (!triggerActivated)
         {
             movingObject.transform.position = Vector3.SmoothDamp(movingObject.transform.position, initLocation.transform.position, ref currentVelocity, smoothTime);
-        }
+        }*/
         
     }
 

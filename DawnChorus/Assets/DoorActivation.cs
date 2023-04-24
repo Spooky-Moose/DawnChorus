@@ -34,10 +34,12 @@ public class DoorActivation : MonoBehaviour
         if (doorOpen)
         {
             door.transform.position = Vector3.SmoothDamp(door.transform.position, finalDoorDestination.transform.position, ref currentVelocity, smoothTime);
+            door.GetComponent<AudioSource>().Play();
         }
         else if (!doorOpen)
         {
             door.transform.position = Vector3.SmoothDamp(door.transform.position, initDoorDestination.transform.position, ref currentVelocity, smoothTime);
+            door.GetComponent<AudioSource>().Play();
         }
     }
 }

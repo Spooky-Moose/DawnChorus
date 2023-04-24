@@ -53,12 +53,12 @@ public class LightTrigger : MonoBehaviour
             roomLight1.GetComponent<Animation>().Play("OnAnim");
             roomLight2.GetComponent<Animation>().Play("OnAnim");
         }
-        else
+        /*else
         {
             roomLight1.GetComponent<Animation>().Play("OffAnim");
             roomLight2.GetComponent<Animation>().Play("OffAnim");
 
-        }
+        }*/
     }
 
 
